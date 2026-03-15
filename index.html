@@ -31,7 +31,7 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* --- HERO SECTION REFORZADA --- */
+        /* --- HERO SECTION --- */
         header {
             position: relative;
             text-align: center;
@@ -44,11 +44,10 @@
             overflow: hidden;
         }
 
-        /* Fondo de Bingo Difuminado desde DRIVE */
         header::before {
             content: '';
             position: absolute; top: -5%; left: -5%; right: -5%; bottom: -5%;
-            background: url('https://drive.google.com/uc?id=1-RzxxSiUHpNaL_4CzAy34HhxMt9Aypz2&export=download') center/cover no-repeat;
+            background: url('cristo evangelizador - 3.JPG') center/cover no-repeat;
             filter: blur(12px); 
             z-index: -2;
         }
@@ -84,7 +83,6 @@
             color: #f1f5f9; text-shadow: 0 2px 8px rgba(0,0,0,0.8); 
         }
 
-        /* Badges de Confianza */
         .trust-badges {
             display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 35px;
         }
@@ -95,7 +93,6 @@
         }
         .badge i { color: #00d2ff; }
 
-        /* Botones */
         .btn {
             display: inline-flex; align-items: center; justify-content: center; gap: 10px;
             background: linear-gradient(45deg, var(--light-blue), var(--accent-purple)); color: white;
@@ -108,12 +105,10 @@
         .btn-wa { background: var(--wa-green); box-shadow: 0 5px 20px rgba(37,211,102,0.5); }
         .btn-wa:hover { background: #1ebe57; box-shadow: 0 10px 30px rgba(37,211,102,0.7); }
 
-        /* Estructura General */
         section { padding: 5rem 2rem; max-width: 1250px; margin: auto; }
         h2 { text-align: center; color: #fff; font-size: 2.8rem; margin-bottom: 3rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
         h2::after { content: ''; width: 100px; height: 5px; background: linear-gradient(90deg, #00d2ff, var(--accent-purple)); display: block; margin: 15px auto 0; border-radius: 3px; }
 
-        /* Tarjetas Glassmorphism */
         .glass-card {
             background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 20px; padding: 2.5rem 2rem;
@@ -128,14 +123,13 @@
         .service-card ul li { margin-bottom: 10px; font-size: 1rem; padding-left: 25px; position: relative; color: #f8f9fa; }
         .service-card ul li::before { content: '✓'; color: #00d2ff; position: absolute; left: 0; font-size: 1.2rem; font-weight: bold; }
 
-        /* Propuesta Religiosa */
         .special-event-section { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-top: 4rem; }
         .special-event-content h3 { font-size: 2.2rem; margin-bottom: 15px; }
         .special-event-content h4 { color: #00d2ff; font-size: 1.3rem; margin: 20px 0 10px 0; }
         .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0 25px 0; }
         .tag-list span { background: rgba(0, 210, 255, 0.15); border: 1px solid rgba(0, 210, 255, 0.4); color: #fff; padding: 8px 18px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; }
 
-        /* --- MEGA GALERÍA INTERACTIVA --- */
+        /* --- MEGA GALERÍA INTERACTIVA (SOLO IMÁGENES) --- */
         .gallery-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
         .filter-btn {
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.3); color: white;
@@ -146,11 +140,9 @@
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
         .gallery-item { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); height: 260px; background: #000; }
         
-        .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
         .gallery-item img:hover { transform: scale(1.1); filter: brightness(0.8); }
-        .gallery-item video { transform: none; }
         
-        /* Botón WhatsApp Flotante */
         .wa-floating {
             position: fixed; bottom: 30px; right: 30px; background-color: var(--wa-green); color: white;
             width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -163,7 +155,6 @@
         }
         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
 
-        /* Animaciones Scroll */
         .reveal { opacity: 0; transform: translateY(50px); transition: all 0.9s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -238,9 +229,9 @@
         <div class="special-event-section glass-card reveal">
             <div class="special-event-content">
                 <h3>Especialistas en Eventos Religiosos e Institucionales</h3>
-                <p>Tenemos amplia experiencia en el cubrimiento técnico y transmisión en vivo de actos solemnes (como <strong>Semana Santa</strong> y actos protocolarios). Amplificamos tu mensaje para que la audiencia, tanto presente como virtual, viva una experiencia impecable.</p>
+                <p>Tenemos amplia experiencia en el cubrimiento técnico y transmisión en vivo de actos solemnes. Amplificamos tu mensaje para que la audiencia, tanto presente como virtual, viva una experiencia impecable.</p>
                 
-                <h4>Infraestructura que marcá la diferencia:</h4>
+                <h4>Infraestructura que marca la diferencia:</h4>
                 <div class="tag-list">
                     <span>Cámaras Profesionales de Video</span>
                     <span>Mixer de Video en Vivo</span>
@@ -270,120 +261,83 @@
 
         <div class="gallery-grid" id="galleryContainer">
             
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1aXqEfzeJJati55HbN3zsjaC974bpE-VE&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1ENxkvY5eYlgO8Cf85J8iHTTBjCfstJj1&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1IhYDw2sZdEAhS1FtXiSNv3aD0CdM8hcf&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1TH-rIDZ2lN3gmcxuVMp3OOoulAraAEop&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1Ot7pPlRwikAqElI97dKbXTxBiYgwmRm5&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1BN7W76mOOW-uZXt21REa9kWSebpBoxCu&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1Me8FmLialApqIR7yDIoa-g7Q0dVr-McY&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1JAB7sD3HQ8n6tHYZJ5q4h-yIryUEunhk&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1Jd-AJ7vP-aUff7mkMuVlYT7Ojw0yJvmE&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1Zt6D2u_lMsvslq0mjyiiVamtYRZ734KO&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1PAsyrLbDrFfIlzdADGKzV7dxIwfX25l8&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1saz2ZVVAIWdot5unpBgadmj-1EWAZef_&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1sfTu2j85K0rUwbx2ESsHHNCSt2hgl4BT&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1Jr924laAQ6lywYdNdHKoSnxbil2n_O0h&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=10qZ-nldfdAfhkA1pDSJv5U30VPkdWliH&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1ladrH2TfKCXCvVx-WbQNGqW03G90HCop&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1V8AAE9V8QlOeTDblzmGjeAXR0PtP8hIi&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=119aNKlp1no87mY_hLQ1Xt7WARGTYpecc&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1JZvYFZaZkHoxFB2xDCdJlkad6384b0Wp&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1pknJA15he6OQVRKCmOlRDK1UzBiwIw2X&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1ajf6iw7uBf2VHUh1fM6Qw0HfmMdYY-cW&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1eiFKe7WQJXBXvkCk-zQ1dxBiUT-eqZuw&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1PXwxFaIn3TiF-rXgqjUvc0lrLWFkM_O4&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1Cj4eDHCChZrgmRuwEaZybYYX87TAm-aX&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1LC28gNZO1DUIbp7ZzhRYmijHlCpOTPUX&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1YR4h3mBt_Z-mhHikK4yhnQbVv22nCrQj&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1t1xXyjlXZ3-XBml-GQGJXurcdBF4hfyO&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item religiosos todos"><img src="https://drive.google.com/uc?id=1pCFM6V67Didq543UL3EoXgu-KRJo3EpR&export=download" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><video src="https://drive.google.com/uc?id=1n-2EiFLBBGWJkT10S6gI7kDOCYIfIEEJ&export=download" controls preload="none" poster="logo.png"></video></div>
+            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 3.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 4.jpeg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="24 de feb - 4.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="24 de feb - 5.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="viernes santo.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="sabado santo-2.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 11.jpeg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 7.jpeg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 13.jpeg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="viernes santo - 4.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="viernes santo - 3.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 6.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 2.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 5.JPG" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 5.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="A3955BBC-1C4A-4BDA-BCD6-998272D8A85A_1_102_o.jpeg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="E377CD7A-266F-4EA3-8261-4323BB10D45B_1_102_o.jpeg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 6.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 2.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 10.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 9.jpg" loading="lazy"></div>
 
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1PETEXTCogHOzLTQwpwk4JAl6rstL5yY7&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=17qMIdftCBD4JeD6oVWm33CP-Jpolmorp&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1IFYCFhxAR2aHNtT_V0EdpBMRpooVk-4y&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1DI7vADAwp_qU0KGNuz1zkR-ytxDuY7Ww&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1OP8r_g-GQPvSdhs9iLGCAmgfLPhP7NtX&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=155XPiZ2x7oMSl-BmhpCXp0hdLajAlhfN&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1hubF5Q3nd030ixTF7TN_FGH00TKalmvO&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1e3vJk4n7qbBq-7vHGyCOvcT1lM2Nv70b&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1oNjGFUrukhJxfoHqNXitCxSZBAqLhwqB&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1QyySUDjyp-Vn_stxDrrFV2-XjM3ONYpl&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=19VQ4raW1hmjxepVjtOOqKqA4E5XqagN4&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1V5l4N0elFS4JqLpVn58tl-f5jh72ksyR&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1cFGkdfgKQ-Yu9Ie4KSCk-_nk137CnzRu&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1318-YgYTMuG3do1VRtmWCZA3RW87i4JT&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=19l3nYuwE-z4n1K_3i9QuYHeMOI_XjvW9&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1sHPVe5xf9DmTw1ChHjb0h6P5yONT5HbL&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=19bgdZY9Oj80LKxlDQJLf7H2iZpV_Je0v&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1igMjHL0jYoAMuwQN5xRsMs_pQtWjve3X&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1K3yNyEccswdjQkznG2jcvPItcY0Xvsqf&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=12FpGWfTTTOYRlcF5krLKw4dd91pjE0EZ&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1XMCE9hyIcQ8bLmCv39uWsB2F-MXMdzmo&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1fRB3KaYMEY7QTiKGulPK-OW0l3_DjzTU&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1m8tLDlVV99kNTdPnd3AiSQog9ZUoBaDz&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1zndDb5UoXRT48nKboev0fNcWsdGkVFEK&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1iUXxDfyL6vw19jZqHB7joRlmuPXvgptx&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1WoMCHMDBJe6AwIKZsBYct57oJvG7KXgA&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1XBZZ-ycMXqYW-HuyVWkD3h5ZzuBB61Cu&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1vr9bSQdpcqR-gluf36ZniWy2xq_K9-FE&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1GiCfAIZ_KqwIhNgKRFXXO7yhn06Y4EsU&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1u4d0nF8breVKAxPBCjZWdl6Hr4UR1lor&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1U4FpYmJhXUFAPicOkHeHJ5derJcoqwiA&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><video src="https://drive.google.com/uc?id=1oJpGydaeVPZ6Y4aGmox41s7OgqJnKPHY&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1v_9KtZxKk9WUXUQbatSheRKZS032z36g&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=1JbEySQ0TL6kxGLUS7ij3czEEV2wqUK62&export=download" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="https://drive.google.com/uc?id=19oZN3dlgt2jfMlfzExFVCqNCgcuelc2p&export=download" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 7.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 10.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="evento ufps-4.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="evento presidencia- 2.jpg" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="evento presidencia- 1.jpg" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="evento presidencia- 3.jpg" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="jorge celedon - 101.jpeg" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="jorge celedon - 47.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="jorge celedon - 45.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="interclases - 11.JPEG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 15.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 16.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 24.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="montaje jessi - 19.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="montaje jessi - 17.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="montaje jessi - 16.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="concierto jessi - 13.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="ufps - 3.JPG" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="ufps - 2.jpg" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="ufps - 1.jpg" loading="lazy"></div>
+            <div class="gallery-item eventos todos"><img src="ufps - 4.JPG" loading="lazy"></div>
 
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1xF_9ElPdE36VL9ysa2oM83oKtsi6Gmsv&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=12oq6Jre2Rl764q5NsVZ4wrME-_XF10pA&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1CvX6fdR_iQOMzFcqT9YSSjM60X8Cgjdk&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1kRjq5FPoe3Wp-JXuqcmTmJ8ZC4FqifUv&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1JOHrxsvSOsn_fzDj6Jf-fnzim6kjwCey&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1B2cUZFwBl6FXxTPRgy1yj_W951e8f2Zu&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1nN7w7EXGTOtDpeZ9nKp9uFGqPPDvd_AE&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1Z31_1tp29kuds-FjgVNp2h1o8U6hAXJm&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1xKO3Gz_cjOLD_GNOmn7O-UbEcj9tezgO&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1Yw82iyywAKL5lfmIOlCk_FxgWsoIV8v0&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1z8Wn-CdGD8stymfq1BQvWoq61vGg9H0x&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1IhnxadG--HA4Oy3aQhrk-ryHsU3uzv21&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1umNjIQKD9NzTqUQKknTPpIN1fTGgFR4C&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1rPyVY0L28aKNhEJES8A4-51toOj-Br-1&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1humF9h7NqQFEO7dlTqB5ER81DQ3EYvXf&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><video src="https://drive.google.com/uc?id=1_KTqD_S65ckSA5zYy6FA2i2wMwvFppnJ&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1XEYvMe7GP_1e58QS3RHjoJ5g2Szx2x8V&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1VPLRREkN5d9_CIFFldXubwJiP3-56IuO&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1gLoz6oKnnYwAz3HJssBEhSx-CQ5EGqdm&export=download" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="https://drive.google.com/uc?id=1A99HGyhzlZW7vlv6tclsi-MlYFUQWNPv&export=download" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 5.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 3.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 2.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 1.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="dia de la familia salesiana - 5.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="24 julio.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="grados 2021-3.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="8A8D7AD6-C760-4021-ACD4-D3C3258A19AE_4_5005_c.jpeg" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="E0379353-724C-4329-895C-44E7CA14077D_1_105_c.jpeg" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="3A0DC549-5CE0-4606-870B-B44295BC7D60_1_105_c.jpeg" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="F133BCB9-A507-40B1-9F32-8D2AE4A289AC_1_105_c.jpeg" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="89B80FB1-45C7-4A3A-909B-0F77E508BDDE_1_105_c.jpeg" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="FBE2FBD3-4C1D-4217-A905-4B9CE482C7C2_1_105_c.jpeg" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmi - 5.JPEG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmi - 4.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmi - 2.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="transmi - 3.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="cazadores - 1.JPG" loading="lazy"></div>
+            <div class="gallery-item streaming todos"><img src="atalaya - 2.JPG" loading="lazy"></div>
 
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1gRrLOKW22_zuPJEFDesPZ5DwOlpuMeP4&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1qe9W9QiscbtEpB_lutq6Z1E8CvkQ9m2n&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1-RzxxSiUHpNaL_4CzAy34HhxMt9Aypz2&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=18XGpaLEX2KwGYbn4F_1acggEQ5R-d89f&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=1uTMt-kMLCACv9qFRsU-iFPcaypbQCgNl&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=1_Kky_qdsBXpT95ViKKWHtLsWPaXznFoW&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1Lb1gd3RrEc5zzEnOSzCv4l375cJVMg3T&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=15-ttvUscojh7i74msFy3r-Gp1-RKyw0P&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=1tYnvRKhern7aMoY92PVpJPaD3PHueZ02&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=1nddkCXnB5S39UlEcyF2iRE2TxONockUh&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1sYI__Z7s3InSbFxtPijOB2M7K1Rk2YZz&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1Hw3DNFZl20xrO-AW_pa2x2KD6Sk1TcQZ&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1OdIJTtsDNqnDPi-XNRB8RqErMpos8QBN&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=14fuT2OHc5jFDNJYJLlWrMHqDaCrwfth-&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="https://drive.google.com/uc?id=1hZst6mEqqMEhuS7m051yn3DGLh_j97MJ&export=download" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><video src="https://drive.google.com/uc?id=1RZFa3skrH_h6KKIwscc-oTKsqpe1xetI&export=download" controls preload="none" poster="logo.png"></video></div>
+            <div class="gallery-item bingos todos"><img src="bingo coorporacion down - 5.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="bingo coorporacion down - 7.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="cristo evangelizador - 3.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="I.E. nueva esperanza - 2.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="valsalice - 4.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="valsalice - 3.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="valsalice - 2.jpg" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="bingo huila - 2.JPG" loading="lazy"></div>
+            <div class="gallery-item bingos todos"><img src="bingo huila - 3.JPG" loading="lazy"></div>
 
-            <div class="gallery-item deportivas todos"><img src="https://drive.google.com/uc?id=1fvRqG6nQyuyzLov_OqCQu1hdOM2nXBi2&export=download" loading="lazy"></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1GugNfpM_hwc44R9TI5pEi9mgcCYvWnLR&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1Y2sVF1xyQnr-n-5hql2Kyx7oOlOy7sDB&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1gpF5I9EjTLxcqhSqy_RocCOp4HmuFeIE&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1aW0-cy6aqAsFIbqzR0s9XK904fIZx8gX&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item deportivas todos"><img src="https://drive.google.com/uc?id=1Q4sN5w4_iMA5t-CMKXr26y_MjBM4IH9N&export=download" loading="lazy"></div>
-            <div class="gallery-item deportivas todos"><img src="https://drive.google.com/uc?id=1H_HWBZ_YIp4BXXH_cuYb-zpGm6Wg8CBw&export=download" loading="lazy"></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1r0SPzUhqD4CeE3hnK8LqJSKYBboUkrBk&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1GfnOT-QO6oUjTnI1WnevlLRFMOCvYP6x&export=download" controls preload="none" poster="logo.png"></video></div>
-            <div class="gallery-item deportivas todos"><video src="https://drive.google.com/uc?id=1yr0Eha2vWunWxARIT473KGOFE8mXQX-J&export=download" controls preload="none" poster="logo.png"></video></div>
+            <div class="gallery-item deportivas todos"><img src="transmicion final torneo departamental - 19.JPG" loading="lazy"></div>
+            <div class="gallery-item deportivas todos"><img src="deportivas - 4.JPG" loading="lazy"></div>
+            <div class="gallery-item deportivas todos"><img src="deportivas - 5.JPG" loading="lazy"></div>
 
         </div>
     </section>
@@ -426,10 +380,9 @@
                     }
                 }
             });
-            
-            document.querySelectorAll('video').forEach(vid => vid.pause());
         }
 
+        // Animación al hacer Scroll
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
