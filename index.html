@@ -41,7 +41,7 @@
             position: relative;
             text-align: center;
             padding: 8rem 1rem 6rem 1rem;
-            min-height: 100vh; /* Ajustado a 100vh para ocupar toda la pantalla */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -191,10 +191,47 @@
         footer { background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); text-align: center; padding: 5rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
         footer h3 { font-size: 2rem; margin-bottom: 1.5rem; background: linear-gradient(45deg, #00d2ff, #9d4edd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
+        /* --- CORRECCIONES PARA MÓVIL (AJUSTE DE TAMAÑOS) --- */
         @media (max-width: 768px) {
-            .hero-hook { font-size: 2.2rem; }
-            .hero-sub { font-size: 1.1rem; }
-            .wa-floating { bottom: 20px; right: 20px; width: 60px; height: 60px; font-size: 35px; }
+            header {
+                padding: 4rem 1rem 4rem 1rem; /* Menos padding para no empujar la flecha */
+            }
+            .logo-container img { 
+                max-width: 180px; /* Logo más pequeño */
+                margin-bottom: 15px; 
+            }
+            .hero-hook { 
+                font-size: 1.8rem; /* Letra más pequeña */
+                margin-bottom: 10px;
+            }
+            .hero-sub { 
+                font-size: 1rem; 
+                margin-bottom: 15px;
+            }
+            .trust-badges {
+                margin-bottom: 20px;
+            }
+            .badge {
+                padding: 5px 12px;
+                font-size: 0.85rem;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+            .scroll-down {
+                bottom: 15px; /* Sube un poco la flecha en móvil */
+                font-size: 2rem;
+            }
+            .wa-floating { 
+                bottom: 20px; right: 20px; width: 60px; height: 60px; font-size: 35px; 
+            }
+        }
+
+        /* Opcional: Para celulares apaisados o muy cortos */
+        @media (max-height: 600px) {
+            header { min-height: auto; padding-top: 5rem; padding-bottom: 5rem; }
+            .scroll-down { display: none; }
         }
     </style>
 </head>
@@ -213,7 +250,7 @@
             <span class="badge"><i class="fas fa-headset"></i> Soporte Integral</span>
         </div>
 
-        <a href="https://wa.me/573132666395?text=Hola,%20visité%20su%20página%20y%20me%20gustaría%20cotizar%20una%20producción." target="_blank" class="btn btn-wa">
+        <a href="https://wa.me/573503875753?text=Hola,%20visité%20su%20página%20y%20me%20gustaría%20cotizar%20una%20producción." target="_blank" class="btn btn-wa">
             <i class="fab fa-whatsapp"></i> COTIZA TU EVENTO AQUÍ
         </a>
 
@@ -234,7 +271,7 @@
                     <li>Tarimas y estructuras seguras</li>
                     <li>Iluminación robótica y arquitectónica</li>
                 </ul>
-                <a href="https://wa.me/573132666395?text=Hola,%20quiero%20cotizar%20Producción%20Técnica." target="_blank" class="btn" style="font-size: 0.9rem; padding: 10px 20px;">Hablar con un asesor</a>
+                <a href="https://wa.me/573503875753?text=Hola,%20quiero%20cotizar%20Producción%20Técnica." target="_blank" class="btn" style="font-size: 0.9rem; padding: 10px 20px;">Hablar con un asesor</a>
             </div>
             <div class="service-card glass-card">
                 <h3>Transmisiones y Streaming</h3>
@@ -245,7 +282,7 @@
                     <li>Dirección de cámaras en vivo</li>
                     <li>Transmisiones Deportivas</li>
                 </ul>
-                <a href="https://wa.me/573132666395?text=Hola,%20quiero%20cotizar%20Streaming/CCTV." target="_blank" class="btn" style="font-size: 0.9rem; padding: 10px 20px;">Hablar con un asesor</a>
+                <a href="https://wa.me/573503875753?text=Hola,%20quiero%20cotizar%20Streaming/CCTV." target="_blank" class="btn" style="font-size: 0.9rem; padding: 10px 20px;">Hablar con un asesor</a>
             </div>
             <div class="service-card glass-card">
                 <h3>Bingos y Soluciones Tech</h3>
@@ -256,7 +293,7 @@
                     <li>Efectos Especiales (Pirotecnia fría)</li>
                     <li>Logística Audiovisual</li>
                 </ul>
-                <a href="https://wa.me/573132666395?text=Hola,%20quiero%20cotizar%20Bingos%20Virtuales." target="_blank" class="btn" style="font-size: 0.9rem; padding: 10px 20px;">Hablar con un asesor</a>
+                <a href="https://wa.me/573503875753?text=Hola,%20quiero%20cotizar%20Bingos%20Virtuales." target="_blank" class="btn" style="font-size: 0.9rem; padding: 10px 20px;">Hablar con un asesor</a>
             </div>
         </div>
 
@@ -274,7 +311,7 @@
                     <span>Personal Técnico de Planta</span>
                 </div>
                 <br>
-                <a href="https://wa.me/573132666395?text=Hola,%20me%20gustaría%20cotizar%20el%20cubrimiento%20para%20un%20Evento%20Religioso/Institucional." target="_blank" class="btn btn-wa">
+                <a href="https://wa.me/573503875753?text=Hola,%20me%20gustaría%20cotizar%20el%20cubrimiento%20para%20un%20Evento%20Religioso/Institucional." target="_blank" class="btn btn-wa">
                     <i class="fab fa-whatsapp"></i> COTIZAR CUBRIMIENTO
                 </a>
             </div>
@@ -330,4 +367,49 @@
             <div class="gallery-item eventos todos"><img src="billos  - corraleros - 16.JPG" loading="lazy" decoding="async"></div>
             <div class="gallery-item eventos todos"><img src="billos  - corraleros - 24.JPG" loading="lazy" decoding="async"></div>
             <div class="gallery-item eventos todos"><img src="montaje jessi - 19.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="montaje jessi - 17.JPG" loading="lazy" decoding="
+            <div class="gallery-item eventos todos"><img src="montaje jessi - 17.JPG" loading="lazy" decoding="async"></div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>JA PRODUCCIONES</h3>
+        <p>Expertos en Producción Técnica Audiovisual y Streaming</p>
+    </footer>
+
+    <a href="https://wa.me/573503875753?text=Hola,%20me%20gustaría%20recibir%20más%20información." class="wa-floating" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Función para los filtros de la galería
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Actualizar botones activos
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Mostrar/ocultar imágenes
+            items.forEach(item => {
+                if (category === 'todos' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Observador de intersección para animar elementos al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
