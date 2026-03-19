@@ -110,7 +110,6 @@
         .btn-wa { background: var(--wa-green); box-shadow: 0 5px 20px rgba(37,211,102,0.5); }
         .btn-wa:hover { background: #1ebe57; box-shadow: 0 10px 30px rgba(37,211,102,0.7); }
 
-        /* --- ANIMACIÓN PARA SCROLL DOWN --- */
         .scroll-down {
             position: absolute;
             bottom: 30px;
@@ -168,7 +167,7 @@
         .filter-btn.active, .filter-btn:hover { background: linear-gradient(45deg, var(--light-blue), var(--accent-purple)); border-color: transparent; transform: scale(1.05); }
         
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); height: 260px; background: #000; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); height: 260px; background: #000; display: none; }
         
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
         .gallery-item img:hover { transform: scale(1.1); filter: brightness(0.8); }
@@ -191,44 +190,19 @@
         footer { background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); text-align: center; padding: 5rem 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
         footer h3 { font-size: 2rem; margin-bottom: 1.5rem; background: linear-gradient(45deg, #00d2ff, #9d4edd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* --- CORRECCIONES PARA MÓVIL (AJUSTE DE TAMAÑOS) --- */
+        /* --- CORRECCIONES PARA MÓVIL --- */
         @media (max-width: 768px) {
-            header {
-                padding: 4rem 1rem 4rem 1rem; /* Menos padding para no empujar la flecha */
-            }
-            .logo-container img { 
-                max-width: 180px; /* Logo más pequeño */
-                margin-bottom: 15px; 
-            }
-            .hero-hook { 
-                font-size: 1.8rem; /* Letra más pequeña */
-                margin-bottom: 10px;
-            }
-            .hero-sub { 
-                font-size: 1rem; 
-                margin-bottom: 15px;
-            }
-            .trust-badges {
-                margin-bottom: 20px;
-            }
-            .badge {
-                padding: 5px 12px;
-                font-size: 0.85rem;
-            }
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.95rem;
-            }
-            .scroll-down {
-                bottom: 15px; /* Sube un poco la flecha en móvil */
-                font-size: 2rem;
-            }
-            .wa-floating { 
-                bottom: 20px; right: 20px; width: 60px; height: 60px; font-size: 35px; 
-            }
+            header { padding: 4rem 1rem 4rem 1rem; }
+            .logo-container img { max-width: 180px; margin-bottom: 15px; }
+            .hero-hook { font-size: 1.8rem; margin-bottom: 10px; }
+            .hero-sub { font-size: 1rem; margin-bottom: 15px; }
+            .trust-badges { margin-bottom: 20px; }
+            .badge { padding: 5px 12px; font-size: 0.85rem; }
+            .btn { padding: 10px 20px; font-size: 0.95rem; }
+            .scroll-down { bottom: 15px; font-size: 2rem; }
+            .wa-floating { bottom: 20px; right: 20px; width: 60px; height: 60px; font-size: 35px; }
         }
 
-        /* Opcional: Para celulares apaisados o muy cortos */
         @media (max-height: 600px) {
             header { min-height: auto; padding-top: 5rem; padding-bottom: 5rem; }
             .scroll-down { display: none; }
@@ -322,53 +296,55 @@
         <h2>Nuestro Trabajo Habla por Nosotros</h2>
         
         <div class="gallery-filters">
-            <button class="filter-btn active" onclick="filterGallery('todos')">Todos</button>
-            <button class="filter-btn" onclick="filterGallery('eventos')">Conciertos y Eventos</button>
-            <button class="filter-btn" onclick="filterGallery('religiosos')">Semana Santa y Religiosos</button>
-            <button class="filter-btn" onclick="filterGallery('streaming')">Streaming y Academia</button>
-            <button class="filter-btn" onclick="filterGallery('bingos')">Bingos</button>
-            <button class="filter-btn" onclick="filterGallery('deportivas')">Deportes</button>
+            <button class="filter-btn active" onclick="filterGallery('eventos', event)">Conciertos y Eventos</button>
+            <button class="filter-btn" onclick="filterGallery('religiosos', event)">Semana Santa y Religiosos</button>
+            <button class="filter-btn" onclick="filterGallery('streaming', event)">Streaming y Academia</button>
+            <button class="filter-btn" onclick="filterGallery('bingos', event)">Bingos</button>
+            <button class="filter-btn" onclick="filterGallery('deportivas', event)">Deportes</button>
         </div>
 
         <div class="gallery-grid" id="galleryContainer">
-            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 3.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 4.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="24 de feb - 4.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="24 de feb - 5.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="viernes santo.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="sabado santo-2.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 11.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 7.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 13.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="viernes santo - 4.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="viernes santo - 3.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 6.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 2.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 5.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 5.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="A3955BBC-1C4A-4BDA-BCD6-998272D8A85A_1_102_o.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="E377CD7A-266F-4EA3-8261-4323BB10D45B_1_102_o.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 6.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 2.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 10.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 9.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos"><img data-src="transmicion miercoles de ceniza - 3.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="transmicion miercoles de ceniza - 4.jpeg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="24 de feb - 4.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="24 de feb - 5.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="viernes santo.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="sabado santo-2.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 11.jpeg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 7.jpeg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 13.jpeg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="viernes santo - 4.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="viernes santo - 3.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="cristo evangelizador - 6.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="cristo evangelizador - 2.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="cristo evangelizador - 5.JPG" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 5.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="A3955BBC-1C4A-4BDA-BCD6-998272D8A85A_1_102_o.jpeg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="E377CD7A-266F-4EA3-8261-4323BB10D45B_1_102_o.jpeg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 6.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 2.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 10.jpg" alt="Evento Religioso"></div>
+            <div class="gallery-item religiosos"><img data-src="semana santa zulia - 9.jpg" alt="Evento Religioso"></div>
 
-            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 7.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 10.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="evento ufps-4.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="evento presidencia- 2.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="evento presidencia- 1.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="evento presidencia- 3.jpg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="jorge celedon - 101.jpeg" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="jorge celedon - 47.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="jorge celedon - 45.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="interclases - 11.JPEG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 15.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 16.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 24.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="montaje jessi - 19.JPG" loading="lazy" decoding="async"></div>
-            <div class="gallery-item eventos todos"><img src="montaje jessi - 17.JPG" loading="lazy" decoding="async"></div>
-        </div>
+            <div class="gallery-item eventos"><img data-src="evento ufps-4.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="evento presidencia- 2.jpg" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="evento presidencia- 1.jpg" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="evento presidencia- 3.jpg" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="jorge celedon - 101.jpeg" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="jorge celedon - 47.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="jorge celedon - 45.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="billos  - corraleros - 15.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="billos  - corraleros - 16.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="billos  - corraleros - 24.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="montaje jessi - 19.JPG" alt="Evento"></div>
+            <div class="gallery-item eventos"><img data-src="montaje jessi - 17.JPG" alt="Evento"></div>
+
+            <div class="gallery-item bingos"><img data-src="bingo bailable mauxi - 7.JPG" alt="Bingo"></div>
+            <div class="gallery-item bingos"><img data-src="bingo bailable mauxi - 10.JPG" alt="Bingo"></div>
+
+            <div class="gallery-item deportivas"><img data-src="interclases - 11.JPEG" alt="Deportes"></div>
+            
+            </div>
     </section>
 
     <footer>
@@ -381,24 +357,37 @@
     </a>
 
     <script>
-        // Función para los filtros de la galería
-        function filterGallery(category) {
+        // Función para los filtros de la galería y carga bajo demanda (Lazy Loading manual)
+        function filterGallery(category, event) {
             const items = document.querySelectorAll('.gallery-item');
             const buttons = document.querySelectorAll('.filter-btn');
             
-            // Actualizar botones activos
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            // Actualizar el botón activo visualmente
+            if(event) {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                event.target.classList.add('active');
+            }
             
-            // Mostrar/ocultar imágenes
+            // Mostrar/ocultar imágenes y cargarlas SOLO si se necesitan
             items.forEach(item => {
-                if (category === 'todos' || item.classList.contains(category)) {
-                    item.style.display = 'block';
+                if (item.classList.contains(category)) {
+                    item.style.display = 'block'; // Mostrar el contenedor
+                    
+                    // Lógica para cargar la imagen si aún no se ha cargado
+                    const img = item.querySelector('img');
+                    if (img && !img.getAttribute('src') && img.getAttribute('data-src')) {
+                        img.setAttribute('src', img.getAttribute('data-src'));
+                    }
                 } else {
-                    item.style.display = 'none';
+                    item.style.display = 'none'; // Ocultar los de otras categorías
                 }
             });
         }
+
+        // Cargar la categoría "eventos" por defecto al iniciar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            filterGallery('eventos', null); 
+        });
 
         // Observador de intersección para animar elementos al hacer scroll
         const observer = new IntersectionObserver((entries) => {
@@ -407,7 +396,7 @@
                     entry.target.classList.add('active');
                 }
             });
-        }, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
