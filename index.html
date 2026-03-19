@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JA PRODUCCIONES | Producción Audiovisual Profesional</title>
+    
+    <link rel="preload" href="logo.png" as="image" fetchpriority="high">
+    <link rel="preload" href="cristo evangelizador - 3.JPG" as="image">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --primary-blue: #002884; 
@@ -36,7 +41,7 @@
             position: relative;
             text-align: center;
             padding: 8rem 1rem 6rem 1rem;
-            min-height: 90vh;
+            min-height: 100vh; /* Ajustado a 100vh para ocupar toda la pantalla */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -105,6 +110,32 @@
         .btn-wa { background: var(--wa-green); box-shadow: 0 5px 20px rgba(37,211,102,0.5); }
         .btn-wa:hover { background: #1ebe57; box-shadow: 0 10px 30px rgba(37,211,102,0.7); }
 
+        /* --- ANIMACIÓN PARA SCROLL DOWN --- */
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 2.5rem;
+            text-decoration: none;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .scroll-down:hover {
+            opacity: 1;
+            color: #00d2ff;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-10px); }
+        }
+
         section { padding: 5rem 2rem; max-width: 1250px; margin: auto; }
         h2 { text-align: center; color: #fff; font-size: 2.8rem; margin-bottom: 3rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
         h2::after { content: ''; width: 100px; height: 5px; background: linear-gradient(90deg, #00d2ff, var(--accent-purple)); display: block; margin: 15px auto 0; border-radius: 3px; }
@@ -129,7 +160,6 @@
         .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0 25px 0; }
         .tag-list span { background: rgba(0, 210, 255, 0.15); border: 1px solid rgba(0, 210, 255, 0.4); color: #fff; padding: 8px 18px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; }
 
-        /* --- MEGA GALERÍA INTERACTIVA (SOLO IMÁGENES) --- */
         .gallery-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
         .filter-btn {
             background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.3); color: white;
@@ -172,7 +202,7 @@
 
     <header class="reveal active">
         <div class="logo-container">
-            <img src="logo.png" alt="JA Producciones Logo">
+            <img src="logo.png" alt="JA Producciones Logo" fetchpriority="high" decoding="async">
         </div>
         <h1 class="hero-hook">Transformamos tu Visión en un Espectáculo Inolvidable</h1>
         <p class="hero-sub">No dejes el éxito de tu evento al azar. Brindamos soporte técnico, visual y sonoro de última generación para conciertos, transmisiones y actos solemnes. Tú pones la idea, nosotros la tecnología.</p>
@@ -185,6 +215,10 @@
 
         <a href="https://wa.me/573132666395?text=Hola,%20visité%20su%20página%20y%20me%20gustaría%20cotizar%20una%20producción." target="_blank" class="btn btn-wa">
             <i class="fab fa-whatsapp"></i> COTIZA TU EVENTO AQUÍ
+        </a>
+
+        <a href="#servicios" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
         </a>
     </header>
 
@@ -260,142 +294,40 @@
         </div>
 
         <div class="gallery-grid" id="galleryContainer">
-            
-            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 3.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 4.jpeg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="24 de feb - 4.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="24 de feb - 5.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="viernes santo.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="sabado santo-2.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 11.jpeg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 7.jpeg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 13.jpeg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="viernes santo - 4.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="viernes santo - 3.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 6.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 2.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 5.JPG" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 5.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="A3955BBC-1C4A-4BDA-BCD6-998272D8A85A_1_102_o.jpeg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="E377CD7A-266F-4EA3-8261-4323BB10D45B_1_102_o.jpeg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 6.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 2.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 10.jpg" loading="lazy"></div>
-            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 9.jpg" loading="lazy"></div>
+            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 3.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="transmicion miercoles de ceniza - 4.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="24 de feb - 4.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="24 de feb - 5.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="viernes santo.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="sabado santo-2.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 11.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 7.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 13.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="viernes santo - 4.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="viernes santo - 3.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 6.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 2.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="cristo evangelizador - 5.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 5.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="A3955BBC-1C4A-4BDA-BCD6-998272D8A85A_1_102_o.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="E377CD7A-266F-4EA3-8261-4323BB10D45B_1_102_o.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 6.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 2.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 10.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item religiosos todos"><img src="semana santa zulia - 9.jpg" loading="lazy" decoding="async"></div>
 
-            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 7.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 10.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="evento ufps-4.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="evento presidencia- 2.jpg" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="evento presidencia- 1.jpg" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="evento presidencia- 3.jpg" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="jorge celedon - 101.jpeg" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="jorge celedon - 47.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="jorge celedon - 45.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="interclases - 11.JPEG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 15.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 16.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 24.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="montaje jessi - 19.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="montaje jessi - 17.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="montaje jessi - 16.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="concierto jessi - 13.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="ufps - 3.JPG" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="ufps - 2.jpg" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="ufps - 1.jpg" loading="lazy"></div>
-            <div class="gallery-item eventos todos"><img src="ufps - 4.JPG" loading="lazy"></div>
-
-            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 5.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 3.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 2.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmicion bicentenario - 1.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="dia de la familia salesiana - 5.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="24 julio.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="grados 2021-3.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="8A8D7AD6-C760-4021-ACD4-D3C3258A19AE_4_5005_c.jpeg" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="E0379353-724C-4329-895C-44E7CA14077D_1_105_c.jpeg" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="3A0DC549-5CE0-4606-870B-B44295BC7D60_1_105_c.jpeg" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="F133BCB9-A507-40B1-9F32-8D2AE4A289AC_1_105_c.jpeg" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="89B80FB1-45C7-4A3A-909B-0F77E508BDDE_1_105_c.jpeg" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="FBE2FBD3-4C1D-4217-A905-4B9CE482C7C2_1_105_c.jpeg" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmi - 5.JPEG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmi - 4.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmi - 2.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="transmi - 3.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="cazadores - 1.JPG" loading="lazy"></div>
-            <div class="gallery-item streaming todos"><img src="atalaya - 2.JPG" loading="lazy"></div>
-
-            <div class="gallery-item bingos todos"><img src="bingo coorporacion down - 5.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="bingo coorporacion down - 7.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="cristo evangelizador - 3.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="I.E. nueva esperanza - 2.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="valsalice - 4.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="valsalice - 3.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="valsalice - 2.jpg" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="bingo huila - 2.JPG" loading="lazy"></div>
-            <div class="gallery-item bingos todos"><img src="bingo huila - 3.JPG" loading="lazy"></div>
-
-            <div class="gallery-item deportivas todos"><img src="transmicion final torneo departamental - 19.JPG" loading="lazy"></div>
-            <div class="gallery-item deportivas todos"><img src="deportivas - 4.JPG" loading="lazy"></div>
-            <div class="gallery-item deportivas todos"><img src="deportivas - 5.JPG" loading="lazy"></div>
-
-        </div>
-    </section>
-
-    <footer>
-        <h3>Hacemos de tu visión una realidad espectacular.</h3>
-        <p style="margin-bottom: 25px;">JA PRODUCCIONES</p>
-        
-        <a href="https://wa.me/573132666395?text=Hola,%20me%20gustaría%20cotizar%20un%20evento." target="_blank" class="btn btn-wa">
-            <i class="fab fa-whatsapp"></i> Hablar con Producción
-        </a>
-        
-        <p style="font-size: 1.5rem; font-weight: bold; color: #00d2ff; margin-top: 20px;">📱 +57 313 2666395</p>
-        <p style="margin-top: 2rem; font-size: 0.9rem; color: #888;">&copy; 2026 JA Producciones. Todos los derechos reservados.</p>
-    </footer>
-
-    <a href="https://wa.me/573132666395?text=Hola,%20vengo%20de%20la%20página%20web%20y%20me%20gustaría%20cotizar%20un%20servicio." class="wa-floating" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script>
-        function filterGallery(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            const items = document.querySelectorAll('.gallery-item');
-            items.forEach(item => {
-                if(category === 'todos') {
-                    item.style.display = 'block';
-                    setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
-                } else {
-                    if(item.classList.contains(category)) {
-                        item.style.display = 'block';
-                        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
-                    } else {
-                        item.style.opacity = '0'; 
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => { item.style.display = 'none'; }, 300);
-                    }
-                }
-            });
-        }
-
-        // Animación al hacer Scroll
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-        reveal();
-    </script>
-</body>
-</html>
+            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 7.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="bingo bailable mauxi - 10.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="evento ufps-4.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="evento presidencia- 2.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="evento presidencia- 1.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="evento presidencia- 3.jpg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="jorge celedon - 101.jpeg" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="jorge celedon - 47.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="jorge celedon - 45.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="interclases - 11.JPEG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 15.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 16.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="billos  - corraleros - 24.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="montaje jessi - 19.JPG" loading="lazy" decoding="async"></div>
+            <div class="gallery-item eventos todos"><img src="montaje jessi - 17.JPG" loading="lazy" decoding="
